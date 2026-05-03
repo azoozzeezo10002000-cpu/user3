@@ -12,13 +12,11 @@
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden pb-16">
     <div id="app-container" class="max-w-md mx-auto min-h-screen relative bg-white shadow-xl flex flex-col">
-        <!-- JS will inject content here -->
-    </div>
+        </div>
     
-    <!-- Install PWA Prompt overlay -->
     <div id="install-prompt" class="fixed inset-0 bg-slate-900/80 z-50 flex items-end sm:items-center justify-center p-4 hidden transition-opacity">
         <div class="bg-white rounded-t-2xl sm:rounded-2xl w-full max-w-sm p-6 flex flex-col items-center text-center animate-slide-up transform transition-transform">
-            <img src="./icon.png" alt="شعار النادي" class="w-20 h-20 mb-4 object-contain" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
+            <img src="./icon-512.png" alt="شعار النادي" class="w-24 h-24 mb-4 object-cover rounded-full shadow-md border-2 border-slate-100" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
             <h3 class="text-xl font-bold mb-2 text-slate-900">تثبيت التطبيق</h3>
             <p class="text-slate-500 text-sm mb-6">قم بتثبيت تطبيق نادي الرجاء العراقي للحصول على تجربة أفضل والوصول السريع للأخبار والنتائج.</p>
             <div class="flex flex-col w-full gap-3">
@@ -42,13 +40,8 @@
         const btnSkip = document.getElementById('btn-skip-install');
 
         window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent Chrome 67 and earlier from automatically showing the prompt
             e.preventDefault();
-            // Stash the event so it can be triggered later.
             deferredPrompt = e;
-            // Update UI to notify the user they can add to home screen
-            
-            // Check if user already skipped recently using localStorage
             if(!localStorage.getItem('pwa_install_skipped')) {
                 installPrompt.classList.remove('hidden');
             }
@@ -56,11 +49,8 @@
 
         btnInstall.addEventListener('click', async () => {
             if (deferredPrompt) {
-                // Show the install prompt
                 deferredPrompt.prompt();
-                // Wait for the user to respond to the prompt
                 const { outcome } = await deferredPrompt.userChoice;
-                // We no longer need the prompt.  Clear it up.
                 deferredPrompt = null;
                 installPrompt.classList.add('hidden');
             }
@@ -68,11 +58,9 @@
 
         btnSkip.addEventListener('click', () => {
             installPrompt.classList.add('hidden');
-            // Remember skip for 1 day
             localStorage.setItem('pwa_install_skipped', 'true');
         });
         
-        // Also hide if they install it through other means
         window.addEventListener('appinstalled', () => {
              installPrompt.classList.add('hidden');
              deferredPrompt = null;
