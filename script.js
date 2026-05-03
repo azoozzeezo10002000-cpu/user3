@@ -60,8 +60,8 @@ function renderLanding() {
     container.innerHTML = `
         <div class="flex-1 flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-slate-900 text-white p-6">
             <div class="mb-12 flex flex-col items-center text-center">
-                <div class="mb-4 flex h-32 w-32 items-center justify-center rounded-full p-1 ring-2 ring-white/30 bg-black/20 overflow-hidden">
-                    <img src="./icon.png" alt="شعار نادي الرجاء العراقي" class="w-full h-full object-contain drop-shadow-md cursor-pointer" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
+                <div class="mb-4 flex h-32 w-32 items-center justify-center rounded-full p-1 ring-2 ring-white/30 bg-white shadow-xl overflow-hidden">
+                    <img src="./icon-512.png" alt="شعار نادي الرجاء العراقي" class="w-full h-full object-cover rounded-full" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
                 </div>
                 <h1 class="text-3xl font-bold tracking-tight">نادي الرجاء العراقي</h1>
                 <p class="mt-2 text-blue-200">التطبيق الرسمي لـ اللاعبين والمشجعين</p>
@@ -186,8 +186,8 @@ window.logout = function() {
 function renderFanApp() {
     container.innerHTML = `
         <header class="flex flex-col py-3 min-h-[5rem] items-center justify-center border-b border-slate-200 bg-white px-4 sticky top-0 z-10 w-full relative">
-            <img src="./icon.png" alt="شعار نادي الرجاء العراقي" class="w-10 h-10 object-contain mb-1" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
-            <h1 class="text-lg font-bold text-slate-900 leading-none">نادي الرجاء العراقي</h1>
+            <img src="./icon-512.png" alt="شعار نادي الرجاء العراقي" class="w-12 h-12 object-cover rounded-full shadow-sm mb-1 border border-slate-100" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
+            <h1 class="text-lg font-bold text-slate-900 leading-none mt-1">نادي الرجاء العراقي</h1>
             <button onclick="logout()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-slate-500 hover:text-red-500 bg-slate-100 rounded-full transition-colors">
                 <i data-lucide="log-out" class="w-5 h-5"></i>
             </button>
@@ -216,8 +216,8 @@ function renderFanApp() {
 function renderPlayerApp() {
     container.innerHTML = `
         <header class="flex flex-col py-3 min-h-[5rem] items-center justify-center border-b border-slate-200 bg-white px-4 sticky top-0 z-10 w-full relative">
-            <img src="./icon.png" alt="شعار نادي الرجاء العراقي" class="w-10 h-10 object-contain mb-1" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
-            <h1 class="text-lg font-bold text-blue-900 leading-none">نادي الرجاء العراقي</h1>
+            <img src="./icon-512.png" alt="شعار نادي الرجاء العراقي" class="w-12 h-12 object-cover rounded-full shadow-sm mb-1 border border-slate-100" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMTIgOGgudDAxIi8+PHBhdGggZD0iTTEyIDEyYTIgMiAwIDAgMSAyejEiLz48L3N2Zz4='">
+            <h1 class="text-lg font-bold text-blue-900 leading-none mt-1">نادي الرجاء العراقي</h1>
             <button onclick="logout()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-slate-500 hover:text-red-500 bg-slate-100 rounded-full transition-colors">
                 <i data-lucide="log-out" class="w-5 h-5"></i>
             </button>
@@ -311,7 +311,7 @@ function getTabContent(tab, role) {
             ${localDB.players.map(p => `
                 <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 flex flex-col items-center text-center">
                     <div class="w-20 h-20 rounded-full bg-slate-100 mb-3 relative flex items-center justify-center shadow-inner overflow-hidden border border-slate-200">
-                        ${p.photo ? `<img src="${p.photo}" class="w-full h-full object-cover" />` : `<i data-lucide="user" class="w-10 h-10 text-slate-300"></i>`}
+                        ${p.photo ? `<img src="${p.photo}" class="w-full h-full object-cover rounded-full" />` : `<i data-lucide="user" class="w-10 h-10 text-slate-300"></i>`}
                         ${p.status === 'أساسي' ? `<div class="absolute bottom-0 right-0 w-4 h-4 rounded-full border-2 border-white bg-green-500"></div>` : ''}
                         ${p.status === 'مصاب' ? `<div class="absolute bottom-0 right-0 w-4 h-4 rounded-full border-2 border-white bg-red-500"></div>` : ''}
                     </div>
@@ -332,7 +332,7 @@ function getTabContent(tab, role) {
                 <div class="h-24 bg-gradient-to-r from-blue-700 to-blue-500"></div>
                 <div class="px-6 pb-6 pt-0 flex flex-col items-center">
                     <div class="-mt-12 mb-4 h-24 w-24 rounded-full border-4 border-white bg-slate-100 shadow-md flex items-center justify-center overflow-hidden">
-                        ${freshPlayer.photo ? `<img src="${freshPlayer.photo}" class="w-full h-full object-cover"/>` : `<i data-lucide="user" class="w-12 h-12 text-slate-300"></i>`}
+                        ${freshPlayer.photo ? `<img src="${freshPlayer.photo}" class="w-full h-full object-cover rounded-full"/>` : `<i data-lucide="user" class="w-12 h-12 text-slate-300"></i>`}
                     </div>
                     <h2 class="text-2xl font-bold text-slate-900">${freshPlayer.name}</h2>
                     <span class="mt-1 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
